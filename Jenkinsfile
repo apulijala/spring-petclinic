@@ -9,7 +9,7 @@ pipeline {
 
         stage("Deploy to S3"){
             steps{
-                sh 'aws s3 ls' 
+                sh 'aws s3 target/spring-petclinic-2.7.0-SNAPSHOT.jar s3://datta-unique/' 
             }
             
         }
